@@ -13,6 +13,7 @@ Config files:
 - [eth1 config (geth format)](./eth1_config.json)
 - [eth1 config (nethermind/open-ethereum format)](./eth1_nethermind_config.json)
 - [eth2 config](./eth2_config.yaml)
+- [Discv5 bootnodes](./bootnodes.txt)
 
 Assets:
 - [`genesis.ssz`](./genesis.ssz)
