@@ -1,4 +1,4 @@
-# Merge devnet 0: steklo
+# Merge devnet preset
 
 CONFIG_NAME: "steklo"
 
@@ -53,7 +53,7 @@ EFFECTIVE_BALANCE_INCREMENT: 1000000000
 
 # Initial values
 # ---------------------------------------------------------------
-GENESIS_FORK_VERSION: 0x00000700
+GENESIS_FORK_VERSION: 0x00000701
 
 BLS_WITHDRAWAL_PREFIX: 0x00
 
@@ -114,7 +114,7 @@ DOMAIN_AGGREGATE_AND_PROOF: 0x06000000
 # Merge
 # ---------------------------------------------------------------
 # Same fork version as genesis, since there is no actual fork
-MERGE_FORK_VERSION: 0x00000700
+MERGE_FORK_VERSION: 0x00000701
 # Merge active from genesis
 MERGE_FORK_SLOT: 0
 
