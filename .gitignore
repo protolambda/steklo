@@ -2,5 +2,5 @@
 mergenet.yaml
 genesis_validators.yaml
 tranches
-
+*.asc
 venv
