@@ -29,10 +29,15 @@ with open('./genesis.ssz', 'rb') as f:
 with open('./eth1_config.json') as f:
     eth1_config = json.load(f)
 
+header_copy = genesis_state.latest_block_header.copy()
+assert header_copy.state_root == Root()
+header_copy.state_root = genesis_state.hash_tree_root()
+
 print(f"""
 genesis_time: {genesis_state.genesis_time}   # {datetime.utcfromtimestamp(int(genesis_state.genesis_time)).strftime('%Y-%m-%d %H:%M:%S')} UTC
 genesis_state_root: 0x{genesis_state.hash_tree_root().hex()}
-genesis_block_root: 0x{genesis_state.latest_block_header.hash_tree_root().hex()}
+genesis_block_root_with_zero_state_root: 0x{genesis_state.latest_block_header.hash_tree_root().hex()}
+genesis_block_root_with_good_state_root: 0x{header_copy.hash_tree_root().hex()}
 genesis_validators_root: 0x{genesis_state.validators.hash_tree_root().hex()}
 genesis_validators_count: {genesis_state.validators.length()}
 genesis_active_validators_count: {len(get_active_validator_indices(genesis_state, Epoch(0)))}
