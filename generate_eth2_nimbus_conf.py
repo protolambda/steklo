@@ -61,5 +61,6 @@ print(json.dumps({
         "DEPOSIT_NETWORK_ID": data['chain_id'],
     },
     "depositContractAddress": data['deposit_contract_address'],
-    "depositContractDeployedAt": "0x" + "00" * 32,  # TODO: need to specify eth1 genesis block hash
+    # TODO hardcoded steklo genesis eth1 block hash
+    "depositContractDeployedAt": "0xa0aaf8d2c42e1c5f377a65f4859e8bca7198688b029b4c3d3243f8b62492657b",
 }, indent="  "))
