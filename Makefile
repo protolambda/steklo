@@ -5,6 +5,7 @@ generate_configs:
 	python ./generate_eth1_conf.py > eth1_config.json
 	python ./generate_eth1_nethermind_conf.py > eth1_nethermind_config.json
 	python ./generate_eth2_conf.py > eth2_config.yaml
+	python ./generate_eth2_nimbus_conf.py > eth2_nimbus_config.json
 
 generate_state:
 	eth2-testnet-genesis merge \
